@@ -1,17 +1,13 @@
 'use strict';
-
-angular.module('psJwtApp')
-  .controller('RegisterCtrl', function ($scope,$http) {
-    $scope.submit = function(){
+angular.module('psJwtApp').controller('RegisterCtrl', function ($scope, $http) {
+    $scope.submit = function () {
         console.log('test');
         var url = '/';
         var user = {};
-        $http.post(url, user)
-        .success(function(res){
+        $http.post(url, user).success(function (res) {
             console.log('good!');
-        })
-        .error(function(err){
+        }).error(function (err) {
             console.log('bad!');
         })
     }
-  });
+});

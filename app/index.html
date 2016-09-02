@@ -37,7 +37,7 @@
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand" href="#/">psJwt</a>
+          <a class="navbar-brand" ui-sref="main">psJwt</a>
         </div>
 
         <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -51,6 +51,7 @@
   </div>
 
   <div class="container">
+    <div class="alert alert-{{alert.type}} animated main-alert" ng-class="{'flipInY': alert.show, 'flipOutY': !alert.show, 'alert-hidden': !alert.hasBeenShown }"></div>
     <div ui-view></div>
   </div>
 
@@ -59,7 +60,6 @@
       <p><span class="glyphicon glyphicon-user"></span> Sherief Abdelmageed</p>
     </div>
   </div>
-
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
   <script>
